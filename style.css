@@ -1,18 +1,15 @@
 * {
     padding: 0;
     margin: 0;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: rgb(179, 162, 144);
-}
+    background-color: rgb(107, 97, 86);
+} 
 
- /* ms */
-
-.all {
-    position: relative;
-}
-
+/* Parte de cima  */
 .top {
     text-align: center;
     padding-top: 10%;
@@ -23,15 +20,21 @@ h1 {
     color: whitesmoke;
 }
 
-#first {
+ /* O primeiro h2 */
+#first-h2 {
     display: inline;
     color: rgb(0, 232, 232);
 }
 
+ /* Parte do meio com os circulos */
 .main, h2 {
     color: gold;
     text-align: center;
     letter-spacing: 2px;
+}
+
+.second-h2 {
+    font-size: 35px;
 }
 
 ul {
@@ -45,15 +48,17 @@ li {
     background-color: white;
     display: inline-block;
     margin-right: 10px;
-    border: 1px solid gold;
+    border: 2px solid rgb(228, 213, 0);
     border-radius: 50px;
     color: black;
     padding: 20px;
-    font-size: 50px;
+    font-size: 55px;
+    background-image: linear-gradient(45deg ,rgb(155, 152, 152) , white 50%);
 }
  
+ /* Parte de baixo, a tabela */
 table {
-    border: 1px solid gold;
+    border: 2px solid gold;
     border-radius: 10px;
     width: 40%;
     color: white;
@@ -63,21 +68,52 @@ table {
     top: 30px;
     left: 30%;
     letter-spacing: 2px;
-}
-
-tr:nth-of-type(1) {
-    color: yellow;
+    padding: 10px 20px 0 20px;
 }
 
 td {
     text-align: center;
     padding: 5px 20px;
-    border-bottom: 1px solid #CCC;
+}
+
+.first-td {
+    text-align: left;
 }
 
 th {
     padding-bottom: 10px;
     font-size: 15px;
     letter-spacing: 2px;
+    color: yellow;
+}
+
+ /* as linhas do meio da tabela */
+.line {
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+ /* tentando deixar responsivel pra telas menores */
+@media screen and (max-width:700px){
+    
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .top {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    li {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .bot {
+        position: absolute;
+        left: -90px;
+    }
 }
 
